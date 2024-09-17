@@ -41,7 +41,7 @@ class pr002 {
                 ch = 'A';
                 for (i=0; i<63; i++) {
                         I = (int)ch;
-                        System.out.print("Код символа " + ch + ": " + I + " \n";
+                        System.out.print("Код символа " + ch + ": " + I + " \n");
                         ch++;
                 }
 
@@ -59,5 +59,29 @@ class pr002 {
                 bool = ch=='я';
                 if(bool)
                 System.out.println("Символ ch равен \"я\"");
+		
+		//Логические операции над переменными
+		System.out.println("\n");
+		boolean p, q;
+		System.out.println("P\tQ\tAND\tOR\tXOR\tNOT");
+		p = true; q = true;
+		System.out.println(p + "\t" + q + "\t");
+		System.out.println((p&q) + "\t" + (p|q) +"\t");
+	        System.out.println((p^q) + "\t" + (!p));
+		
+		p = true; q = false;
+                System.out.println(p + "\t" + q + "\t");
+                System.out.println((p&q) + "\t" + (p|q) +"\t");
+                System.out.println((p^q) + "\t" + (!p));
+		
+		p = false; q = true;
+                System.out.println(p + "\t" + q + "\t");
+                System.out.println((p&q) + "\t" + (p|q) +"\t");
+                System.out.println((p^q) + "\t" + (!p));
+		
+		p = false; q = false;
+                System.out.println(p + "\t" + q + "\t");
+                System.out.println((p&q) + "\t" + (p|q) +"\t");
+                System.out.println((p^q) + "\t" + (!p));	
 	}
 }
