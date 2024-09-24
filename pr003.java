@@ -85,5 +85,35 @@ class pr003 {
 				System.out.println("Не выведется");
 				break;
 		}
+		//Оператор цикла for
+		System.out.println("\n");
+		double num, sroot, rerr;
+
+		for(num=1.0; num <100.0; num++) {
+			sroot = Math.sqrt(num);
+			System.out.println("Квадратный корень числа " + num + " равен " + sroot);
+			//Вычисление ошибки округления
+			rerr = num - (sroot * sroot);
+			System.out.println("Ошибка округления составляет " + rerr);
+			System.out.println();
+		}
+
+		int x1;
+
+		for (x1=100; x1>-100;x1-=5)
+			System.out.println(x1);
+		
+		System.out.println("\n");
+
+		int w, m;
+		for (w=0,m=10;w<m;w++,m--)
+			System.out.println("w и m: " + w + " " + m);
+		
+		System.out.println("\n");
+
+		int i8;
+		System.out.println("Для остановки цикла нажмите клавишу \"s\"");
+		for (i8 = 0; (char) System.in.read() != 's'; i8++)
+			System.out.println("Итерация №" + i8);
 	}
 }
