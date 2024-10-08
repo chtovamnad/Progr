@@ -6,6 +6,14 @@ class Avtomobil {
 	void rasst() {
 		System.out.println("Расстояние на полном баке: " + ((int)(v/rash*100)));
 	}
+
+	int rasst2() {
+		return (int)(v/rash*100);
+	}
+
+	double fuelneeded(int km) {
+		return ((double)km/100)*rash;
+	}
 }
 class pr004 {
 	public static void main(String args[]) {
@@ -23,17 +31,23 @@ class pr004 {
 		porsche.v = 100;
 		porsche.rash = 14.0;
 
-		
+		System.out.println("Для расстояния в 10 км. нужно " + lada.fuelneeded(10) + " литров бензина");
+		rasst=10;
+		System.out.println("Для расстояния в 10 км. нужно " + lada.fuelneeded(rasst) + " литров бензина");
 
 		//Расчет расстояния, которое lada проедет на полном баке
 		//rasst = (int) (lada.v/lada.rash * 100);
 
 		System.out.print("Для Lada: ");
 		lada.rasst();
+		rasst = lada.rasst2();
+		System.out.println("Результат вызова метода rasst2(): " + rasst);
 
 		//rasst2 = (int) (porsche.v/porsche.rash * 100);
 
                 System.out.print("Для Porsche: ");
 		porsche.rasst();
+		System.out.println("Результат вызова метода rasst2(): " + porsche.rasst2());
 	}
 }
+
