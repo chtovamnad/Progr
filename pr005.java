@@ -145,12 +145,45 @@ class Arrays {
 			for (int i3=0; i3<sample3.length; i3++)
 				sample1[i3] = sample3[i3];
 
-		//Вывод соержимого sample1 после копирования
+		//Вывод содержимого sample1 после копирования
 		System.out.println("Массив sample[] после копирования: ");
                 for (int i3=0; i3<sample1.length; i3++)
                         System.out.println(sample1[i3] + " ");
                 System.out.println();
 
+		//Цикл "for-each"
+		System.out.println();
+		int summ = 0;
+		for (int i3=0; i3<10; i3++)
+			summ += sample3[i3];
+		System.out.println(summ);
+		
+		summ = 0;
+		for(int x: sample3) {
+			System.out.println("Очередное значение: " + x);
+			summ += x;
+		}
+		System.out.println(summ);
+
+		//For-each для двумерного массива
+		summ = 0;
+		int val = 22;
+		boolean found = false;
+		for(int[] x : riders) {
+			for(int y : x) {
+				if (y == val) {
+					found = true;
+					break;
+				}
+				System.out.println("Значение: " + y);
+				summ += y;
+			}
+			System.out.println("Новая строка массива");
+		}
+		System.out.println("Сумма: " + summ);
+		if(found)
+			System.out.println("Значение найдено");
+	           
 
 	}
 }
