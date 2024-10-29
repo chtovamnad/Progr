@@ -104,7 +104,8 @@ class pr006 {
                         System.out.println();
                         v = v >> 1;
                 }
-	
+		
+			
 	}
 }
-w
+
