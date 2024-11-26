@@ -25,6 +25,15 @@ class TwoDShape {
 class Triangle extends TwoDShape {
 	String style;
 
+	//Конструктор
+	Triangle(String s, double w, double h) {
+		//Установка значений для переменной подкласса
+		style = s;
+		//Установка значений для переменных суперкласса
+		setWidth(w);
+		setHeight(h);
+	}
+
 	double area() {
 		return getWidth()*getHeight()/2;
 	}
@@ -34,6 +43,16 @@ class Triangle extends TwoDShape {
 }
 class Rectangle extends TwoDShape {
 	String outline;
+
+	//Конструктор
+	Rectangle(String o, double w, double h) {
+		//Установка значений для переменной класса
+		outline = o;
+		//установка значений для переменной суперкласса
+		setWidth(w);
+		setHeight(h);
+	}
+	
 	double area() {
 		return getWidth()*getHeight();
 	}
@@ -52,6 +71,11 @@ class pr009 {
 		Triangle t2 = new Triangle();
 		Rectangle r1 = new Rectangle();
 		Rectangle r2 = new Rectangle();
+		Triangle t1 = new Triangle("закрашенный", 4.0, 4.0);
+		Triangle t2 = new Triangle("контурный", 8.0, 12.0);
+		Rectangle r1 = new Rectangle("сплошная", 4.0, 4.0);
+		Rectangle r2 = new Rectangle("пунктирная", 8.0, 12.0);
+		/*
 		t1.setwidth = 4.0;
 		t1.setheight = 4.0;
 		t1.style = "закрашенный";
@@ -64,9 +88,10 @@ class pr009 {
 		r2.setwidth = 8.0;
                 r2.setheight = 12.0;
                 r2.outline = "пунктирная";
+		*/
 		System.out.println("Информация об объекте t1: ");
-		t1.showStyle();
-		t1.showDim();
+		t2.showStyle();
+		t2.showDim();
 		System.out.println("Площадь: " + t1.area());
 		System.out.println();
 		System.out.println("Информация об объекте t2: ");
