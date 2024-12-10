@@ -1,4 +1,11 @@
 package bookpackext;
+
+//Импорт класса из bookpack
+import bookback.Book;
+/*
+* Импорт всех классов из пакета bookpack
+* import bookpack.*;
+*/
 class pr011 {
 	public static void main(String[] args){
     		bookpack.Book[] books = new bookpack.Book[5];
