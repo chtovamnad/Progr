@@ -1,4 +1,4 @@
-public interface Series {
+public interface series {
   int getNext(); //Возврат следующего числа в последовательности
   void reset(); //восстановление исходного состояния последовательности (сброс)
   void setStart(int x); //установка начального значения в последовательности

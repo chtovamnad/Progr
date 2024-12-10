@@ -1,32 +1,33 @@
-class ByTwos implements series {
+class ByThrees implements series {
   int start;
   int val;
-  int prev;
+//  int prev;
 
-  ByTwos() {
+  ByThrees() {
     start = 0;
     val = 0;
-    prev = -2;
+//    prev = -2;
   }
 
   public int getNext() {
-    prev = val;
-    val += 2;
+//    prev = val;
+    val += 3;
     return val;
   }
 
   public void reset() {
     val = start;
-    prev = start -2;
+//    prev = start -2;
   }
 
   public void setStart(int x) {
     start = x;
     val = x;
-    prev = x -2;
+//    prev = x -2;
   }
 
-  int getPrevious() {
-    return prev;
-  }
+//  int getPrevious() {
+//    return prev;
+//  }
 }
+
